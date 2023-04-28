@@ -16,6 +16,9 @@ In a perfect world,
     docker stack deploy -c compose.yaml bjoern-test
     Go to http://localhost:12345/
 
+    gh auth login
+    git push
+
 In the imperfect world,
 
     docker run -it wildsong/bjoern bash
