@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  bjoern:
+    container_name: bjoern-test
+    image: cc/bjoern
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - VARIABLE_NAME=application
+      - MODULE_NAME=app.hello
+    ports:
+      - "12345:80"
+    volumes:
+      - ./app:/app/app:ro
+
