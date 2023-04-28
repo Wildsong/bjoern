@@ -1,11 +1,11 @@
 import sys
-import os
 from flask import Flask
 import logging
 from requestlogger import WSGILogger
 from datetime import datetime as dt
 
 app = Flask(__name__)
+counter = 0
 
 def MyFormatter():
     return Formatters.my_format
@@ -25,10 +25,12 @@ def hello_world():
     message = f"Bjoern serving Flask WSGI Python {version} in a Docker container"
     return message.encode("utf-8")
 
-@app.route("/achoo")
-def achoo():
+@app.route("/status")
+def status():
+    global counter
     version = f"{sys.version_info.major}.{sys.version_info.minor}"
-    message = f"<h1>Gesundheit!</h1>"
+    message = f"<h1>Status</h1> {version} {counter}"
+    counter += 1
     return message.encode("utf-8")
 
 handlers = [ logging.StreamHandler(), ]
