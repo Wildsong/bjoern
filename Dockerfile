@@ -8,9 +8,8 @@ LABEL biz.wildsong.name="bjoern-template"
 # Keep in mind this is a Debian + Python based image
 
 # Add flask and anything else you need
-RUN pip install \
-    flask flask-wtf flask-bootstrap flask-debugtoolbar \
-    requests jinja2
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 WORKDIR /app/
 COPY app .

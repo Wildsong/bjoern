@@ -33,7 +33,9 @@ After making changes, build again. Push the image up to Docker.
     docker buildx build -t wildsong/bjoern .
     docker push wildsong/bjoern
 
-I switched to using HTTPS instead of SSH for github, so I have to remember to log in!
+I had to set up a docker credential for push to docker.
+
+I also switched to using HTTPS instead of SSH for github, so I have to remember to log in from time to time!
 
     gh auth login
     git push

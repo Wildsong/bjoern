@@ -6,3 +6,4 @@ flask-bootstrap
 flask-debugtoolbar
 requests
 jinja2
+wsgi-request-logger
