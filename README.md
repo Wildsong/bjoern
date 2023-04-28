@@ -62,7 +62,8 @@ Where to get "gh": https://github.com/cli/cli#installation
 
 ## To do
 
-There is always more. 
+There is always more.
 
+* Finish the launch.json file
 * I'd like a better healthcheck than "curl". I have Python + requests available for this. Elton Stoneman says it's better.
 * Add version numbers in requirements.txt ?? Best practice ?? Mmm?
