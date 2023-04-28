@@ -1,0 +1,8 @@
+# This is used for both a local Conda environment and
+# for pip in the Dockerfile.
+flask
+flask-wtf
+flask-bootstrap
+flask-debugtoolbar
+requests
+jinja2
